@@ -5,7 +5,7 @@ cd angular-project
 ```
 - Ensuite, il faut lancer le serveur de l'API 
 ```
-npm run json:serve
+npm run json:server
 ```
 - Enfin, on lance le projet
 ```
