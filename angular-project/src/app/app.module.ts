@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { AccueilComponent } from './accueil/accueil.component';
+import { HomeComponent } from './home/home.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +30,7 @@ import { CreateMaterialComponent } from './createMaterial/createMaterial.compone
 @NgModule({
   declarations: [
     AppComponent,
-    AccueilComponent,
+    HomeComponent,
     MenuComponent,
     ListEmployesComponent,
     LoginComponent,

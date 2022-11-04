@@ -3,12 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-accueil',
-  templateUrl: './accueil.component.html',
-  styleUrls: ['./accueil.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 
-export class AccueilComponent implements OnInit {
+export class HomeComponent implements OnInit {
   data : any = [];
 
   constructor(private http: HttpClient) { }

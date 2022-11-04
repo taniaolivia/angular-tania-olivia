@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AccueilComponent } from './accueil/accueil.component';
+import { HomeComponent } from './home/home.component';
 import { ListEmployesComponent } from './list-employes/list-employes.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './helpers/auth.guard';
@@ -13,7 +13,7 @@ import { CreateMaterialComponent } from './createMaterial/createMaterial.compone
 
 
 export const routes: Routes = [
-  {path: "", component: AccueilComponent, canActivate: [AuthGuard]},
+  {path: "", component: HomeComponent, canActivate: [AuthGuard]},
   {path: "employes", component: ListEmployesComponent, canActivate: [AuthGuard]},
   {path: "login", component: LoginComponent},
   {path: "addEmploye", component: AddEmployeComponent, canActivate: [AuthGuard]},
