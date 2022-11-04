@@ -1,0 +1,45 @@
+<div id="title">
+  <h1 id="title">MODIFY EMPLOYE</h1>
+</div>
+
+<div id="container1">
+  <form
+    [formGroup]="modifyEmployeForm"
+    fxLayout="column"
+    fxLayoutAlign="center stretch" *ngFor="let employe of data">
+    <mat-form-field>
+      <mat-label>First name</mat-label>
+      <input matInput formControlName="firstname" [(ngModel)]="employe.firstname"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Last name</mat-label>
+      <input matInput formControlName="lastname" [(ngModel)]="employe.lastname"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" [(ngModel)]="employe.email"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Age</mat-label>
+      <input matInput formControlName="age" [(ngModel)]="employe.age"/>
+    </mat-form-field>
+    <mat-label id="radioLabel">Validated</mat-label>
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="validated">
+      <mat-radio-button class="example-radio-button" (click)="selected(true)" [checked]="employe.validated" [value]="true">
+       True
+      </mat-radio-button>
+      <mat-radio-button class="example-radio-button" (click)="selected(false)"[checked]="!employe.validated" [value]="false">
+       False
+      </mat-radio-button>
+    </mat-radio-group>
+  </form>
+
+  <button mat-raised-button color="primary" (click)="onSubmit()">
+    Save
+  </button>
+</div>
+
+<app-menu></app-menu>

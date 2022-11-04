@@ -1,0 +1,31 @@
+<div id="title">
+  <h1 id="title">CREATE NEW MATERIAL</h1>
+</div>
+
+<div id="container1">
+      <form
+        [formGroup]="createMaterialForm"
+        fxLayout="column"
+        fxLayoutAlign="center stretch"
+      >
+        <mat-form-field>
+          <mat-label>Ref</mat-label>
+          <input matInput formControlName="ref" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>State</mat-label>
+          <input matInput formControlName="state" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
+      </form>
+
+      <button mat-raised-button color="primary" (click)="onSubmit()">
+        Create
+      </button>
+</div>
+
+<app-menu></app-menu>
+

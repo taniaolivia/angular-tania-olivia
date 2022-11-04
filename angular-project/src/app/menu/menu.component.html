@@ -1,0 +1,18 @@
+<footer>
+    <a [routerLink]="['']">
+        <i class="fas fa-home"></i>
+        <p class="title">Home</p>
+    </a>
+    <a [routerLink]="['/profile']">
+        <i class="fas fa-user-circle"></i>
+        <p class="title">My profile</p>
+    </a>
+    <a [routerLink]="['/employes']">
+        <i class="fas fa-users"></i>
+        <p class="title">List of employes</p>
+    </a>
+    <a (click)="logout()" *ngIf="show">
+        <i class="fas fa-sign-out-alt"></i>
+        <p class="title">Logout</p>
+    </a>
+</footer>

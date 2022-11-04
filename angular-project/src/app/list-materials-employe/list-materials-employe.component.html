@@ -1,0 +1,21 @@
+<section>
+  <div id="title">
+      <h1>LIST OF MATERIALS</h1>
+  </div>
+  
+  <div class="buttons1">
+    <button mat-raised-button color="primary" [routerLink]="['create']">Create new material</button>
+    <button mat-raised-button color="primary" [routerLink]="['add']">Add new material</button>
+  </div>
+  
+  <div *ngFor = "let material of data[0]" id = "container1" >
+      <div id="container2">
+        <img src="../../assets/{{material.image}}">
+        <h2>Ref: {{material.ref}}, Name: {{material.name}}, State: {{material.state}}</h2>
+      </div>
+  </div>
+</section>
+
+<app-menu></app-menu>
+
+

@@ -1,0 +1,24 @@
+<section>
+  <div id="title">
+    <h1>ADD NEW MATERIAL</h1>
+  </div>
+  
+  <div id="container1">
+      <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="materialId" *ngFor = "let materials of material">
+        <mat-radio-button class="example-radio-button" value="{{materials.id}}" [checked]="!materials.id">
+          <div id="container2">
+            <img src="../../assets/{{materials.image}}">
+            <h2>Ref: {{materials.ref}}, Name: {{materials.name}}, State: {{materials.state}}</h2>
+          </div>
+        </mat-radio-button>
+      </mat-radio-group>
+    <button mat-raised-button color="primary" (click)="onSubmit()">
+      Add
+    </button>
+  </div>
+</section>
+<app-menu></app-menu>
+

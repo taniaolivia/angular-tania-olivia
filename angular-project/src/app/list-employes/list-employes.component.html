@@ -1,0 +1,39 @@
+<section>
+  <div id="title">
+      <h1>LIST OF EMPLOYES</h1>
+  </div>
+  
+  <div class="buttons1">
+    <button mat-raised-button color="primary" [routerLink]="['/addEmploye']" id="addEmploye">Add new employe</button>
+    <div class="search">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" (ngModelChange)="search()" placeholder="Search by id or name">
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Filter by :
+      </button>
+      <ul class="dropdown-menu">
+        <li *ngFor= "let material of material[0]">
+          <a class="dropdown-item" (click)="filteredByMaterial(material.id)">{{material.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+  <div *ngFor = "let employes of data" id = "container1" >
+      <div id="container2">
+        <img src="../../assets/{{employes.profilImage}}">
+        <h2>{{employes.firstname}} {{employes.lastname}}</h2>
+        <div class="buttons2">
+          <button mat-raised-button color="primary" [routerLink]='["/employe/", employes.id, "materials"]'>Material</button>
+          <button mat-raised-button color="accent" [routerLink]='["/employe/", employes.id, "modify"]'>Modify</button>
+          <button mat-raised-button color="warn" (click)="deleteEmploye(employes.id)">Delete</button>
+        </div>
+      </div>
+  </div>
+</section>
+
+<app-menu></app-menu>
+
+

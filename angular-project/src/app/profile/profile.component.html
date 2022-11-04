@@ -1,0 +1,26 @@
+<section>
+  <div id="title">
+      <h1>MY PROFILE</h1>
+  </div>
+  <div id="container1">
+    <form
+        [formGroup]="modifyProfileForm"
+        fxLayout="column"
+        fxLayoutAlign="center stretch" *ngFor = "let users of data">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" [(ngModel)]="users.username"/>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password : </mat-label>
+          <input matInput type="password" formControlName="password" [(ngModel)]="users.password"/>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button color="primary" (click)="onSubmit()">
+      Save
+    </button>
+  </div>
+</section>
+
+<app-menu></app-menu>
